@@ -30,7 +30,7 @@ body > .container{
 h1, h2, h3, h4, h5, h6, .subheadline {
   font-weight: normal;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #b5e853;
+  color: #fb6900;
   letter-spacing: -0.03em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
                0 0 5px rgba(181, 232, 83, 0.1),
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, .subheadline {
 
 /* Links */
 a {
-  color: #63c0f5;
+  color: #fb6900;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 
@@ -80,9 +80,8 @@ a {
  * Header
  * ======
  */
-header {
-  background: rgba(0, 0, 0, 0.1);
-  border-bottom: 1px dashed #b5e853;
+body > header {
+  border-bottom: 1px dashed #007E80;
   padding: 20px 0;
   margin: 0 0 40px 0;
 }
@@ -92,7 +91,7 @@ header {
   margin:0;
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #b5e853;
+  color: #fb6900;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
                0 0 5px rgba(181, 232, 83, 0.1),
                0 0 10px rgba(181, 232, 83, 0.1);
@@ -133,7 +132,17 @@ main{
  * Content Section
  * ============
  */
-article .title{
+article {
+  border-bottom: 1px dashed #007E80;
+  margin-bottom: 3.5em;
+}
+article > header {
+	line-height: 0.5;
+}
+.metadata > .author {
+	display: none;
+}
+article .post-title{
   font-size: 1.8em;
 }
 .content{
@@ -175,8 +184,8 @@ article .title{
   content: ">>";
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 0.8125em;
-  color: #b5e853;
-  margin-left: -37px;
+  color: #fb6900;
+  margin-left: -25px;
   margin-right: 21px;
   line-height: 16px;
 }
@@ -186,11 +195,11 @@ article .title{
   border-left: 1px dotted #666;
 }
 .content pre {
-  background: rgba(0, 0, 0, 0.9);
+/*  background: rgba(0, 0, 0, 0.9); */
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 10px;
   font-size: 0.875em;
-  color: #b5e853;
+  color: #fb6900;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -204,7 +213,7 @@ article .title{
 }
 .content th {
   text-align: left;
-  border-bottom: 1px dashed #b5e853;
+  border-bottom: 1px dashed #007E80;
   padding: 5px 10px;
 }
 .content td {
@@ -213,6 +222,6 @@ article .title{
 .content hr {
   height: 0;
   border: 0;
-  border-bottom: 1px dashed #b5e853;
-  color: #b5e853;
+  border-bottom: 1px dashed #007E80;
+  color: #007E80;
 }
