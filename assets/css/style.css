@@ -80,6 +80,10 @@ a {
  * Header
  * ======
  */
+#menu a {
+  font-size: 130%;
+  margin: 0 0.2em;
+}
 body > header {
   border-bottom: 1px dashed #007E80;
   padding: 20px 0;
@@ -137,7 +141,7 @@ article {
   margin-bottom: 3.5em;
 }
 article > header {
-	line-height: 0.5;
+	line-height: 1;
 }
 .metadata > .author {
 	display: none;
