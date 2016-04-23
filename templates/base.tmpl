@@ -13,7 +13,7 @@ ${template_hooks['extra_head']()}
 <body>
 
      <header class="container site-header">
-      <div class="inner clearfix">
+      <div class="inner clearfix wrapper">
         ${header.html_site_title()}
         <!--<h1 class="site-title">...</h1>
         <p class="subheadline">... coming soon</p>-->
@@ -21,16 +21,12 @@ ${template_hooks['extra_head']()}
       </div>
     </header>
       
-      <div class="container content" id="content">
 		<main class="container main">
-		<div class="inner wrapper">
+		<div class="inner wrapper clearfix">
 			<%block name="content"></%block>
 			${footer.html_footer()}
 		</div>
 		</main>
-      </div>
-    </div>
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     ${body_end}
     ${template_hooks['body_end']()}
     ${base.late_load_js()}
