@@ -11,7 +11,12 @@ ${base.html_headstart()}
 ${template_hooks['extra_head']()}
 </head>
 <body>
-
+  <nav id="skip">
+    <ul>
+      <li><a href="#main-menu"><?php print t('Jump to Navigation'); ?></a></li>
+      <li><a href="#main"><?php print t('Jump to Content'); ?></a></li>
+    </ul>
+  </nav>
      <header class="container site-header">
       <div class="inner clearfix wrapper">
         ${header.html_site_title()}
@@ -21,7 +26,7 @@ ${template_hooks['extra_head']()}
       </div>
     </header>
       
-		<main class="container main">
+		<main id="main" class="container main">
 		<div class="inner wrapper clearfix">
 			<%block name="content"></%block>
 		</div>
