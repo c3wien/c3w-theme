@@ -5,10 +5,15 @@
  * - Stefan Haslinger
  * - Thomas Fellinger
  */
+
+/* Font size to 10px at body */
+html{
+  font-size:1.25em;
+}
 body {
   background: #151515 url("../images/bkg.png") 0 0;
   color: #eaeaea;
-  font: 16px;
+  font-size: 0.5em;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
