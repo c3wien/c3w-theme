@@ -48,6 +48,9 @@ a {
   color: #fb6900;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
+nav {
+  color: #fb6900;
+}
 
 /* Buttons */
 .button {
@@ -80,6 +83,13 @@ a {
   opacity: 0.6;
   background: url("../images/blacktocat.png") 0 0 no-repeat;
 }
+/* menus */
+.menu{
+  padding:0;
+}
+.menu li{
+  list-style:none;
+}
 
 /**
  * Header
@@ -90,9 +100,8 @@ a {
   margin: 0 0.2em;
 }
 body > header {
-  border-bottom: 1px dashed #007E80;
-  padding: 20px 0;
-  margin: 0 0 40px 0;
+  padding: 20px 0 0 0;
+  margin: 0;
 }
 .site-title {
   font-size: 3em;
@@ -117,10 +126,39 @@ header .subheadline {
   color: #666;
   margin-left:40px;
 }
+header .logo{
+  display:block;
+  margin:0 -1em;
+  max-width:30em;
+}
+header .logo img{
+  display:block;
+}
 #downloads {
   display: inline-block;
   text-align: center;
   margin: 0 0 20px 40px;
+}
+
+/**
+ * Main Navigation
+ * ===============
+ */
+body > .menu-bar{
+  border-bottom: 1px dashed #007E80;
+  margin:0 0 4em 0;
+}
+.menu-bar .menu li{
+  float:left;
+}
+.menu-bar .menu{
+  margin:0 -0.6em;
+}
+.menu-bar .menu a{
+  display:block;
+  font-size:1.3em;
+  padding:0.2em 0.5em 0.3em 0.5em;
+  line-height:2;
 }
 
 /* 
@@ -129,6 +167,8 @@ header .subheadline {
  */
 main{
   -webkit-font-smoothing: antialiased;
+  border-bottom: 1px dashed #007E80;
+  margin-bottom:3.5em;
 }
 /* override defaulkt.css, which is for 2 columns layout */
 .main .articles,
@@ -142,8 +182,10 @@ main{
  * ============
  */
 article {
-  border-bottom: 1px dashed #007E80;
   margin-bottom: 3.5em;
+}
+.articles article + article{
+  border-top: 1px dashed #007E80;
 }
 article > header {
 	line-height: 1;
@@ -233,4 +275,12 @@ article .post-title{
   border: 0;
   border-bottom: 1px dashed #007E80;
   color: #007E80;
+}
+
+/** 
+ * Site Footer
+ * ===========
+ */
+.site-footer > .inner{
+  font-size:1.6em;
 }
