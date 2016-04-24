@@ -24,7 +24,7 @@
 
 <%def name="html_navigation_links()">
     <nav id="menuBar" role="navigation" class="sidebar container menu-bar region">
-      <ul class="menu" id="menu-main">
+      <ul class="menu clearfix" id="menu-main">
     %for url, text in navigation_links[lang]:
         <li><a href="${url}">${text}</a></li>
     %endfor
