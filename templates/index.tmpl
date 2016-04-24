@@ -15,7 +15,8 @@
 <section class="articles wrapper container" id="content">
   <div class="inner">
   % for post in posts:
-    <article class="post hentry post-${post.meta('type')}" id="post-${post.meta('id')}">
+    <article class="post hentry post-${post.meta('type')}" id="post-${post.meta('slug')}">
+      <div class="inner clearfix">
       <h1 class="title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h1>
       <aside class="meta">
         <p class="byline author vcard"><span class="byline-name fn">${post.author()}</span></p>
