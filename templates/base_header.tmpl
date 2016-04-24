@@ -24,13 +24,15 @@
 
 <%def name="html_navigation_links()">
     <nav id="menuBar" role="navigation" class="sidebar container menu-bar region">
-      <ul class="menu clearfix wrapper" id="menu-main">
-    %for url, text in navigation_links[lang]:
-        <li><a href="${url}">${text}</a></li>
-    %endfor
-      </ul>
-    ${template_hooks['menu']()}
-    ${template_hooks['menu_alt']()}
+      <div class="inner wrapper">
+        <ul class="menu clearfix" id="menu-main">
+      %for url, text in navigation_links[lang]:
+          <li><a href="${url}">${text}</a></li>
+      %endfor
+        </ul>
+      ${template_hooks['menu']()}
+      ${template_hooks['menu_alt']()}
+      </div>
     </nav>
 </%def>
 
