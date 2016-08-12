@@ -11,25 +11,33 @@ ${base.html_headstart()}
 ${template_hooks['extra_head']()}
 </head>
 <body>
-
-     <header class="container site-header">
-      <div class="inner clearfix">
-        ${header.html_site_title()}
-        <!--<h1 class="site-title">...</h1>
-        <p class="subheadline">... coming soon</p>-->
-        ${header.html_navigation_links()}
-      </div>
-    </header>
-      
-		<main class="container main">
-		  <div class="inner wrapper">
-			  <%block name="content"></%block>
-			  ${footer.html_footer()}
-		  </div>
-		</main>
-    ${body_end}
-    ${template_hooks['body_end']()}
-    ${base.late_load_js()}
-    <%block name="extra_js"></%block>
+  <!-- skin navigation to use with tabulator (accessibility) -->
+  <nav id="skip">
+    <ul>
+      <li><a href="#menu-main">Jump to Navigation</a></li>
+      <li><a href="#main">Jump to Content</a></li>
+    </ul>
+  </nav>
+  <!-- site-header -->
+  <header class="container site-header">
+    <div class="inner clearfix">
+      ${header.html_site_title()}
+      <!--<h1 class="site-title">...</h1>
+      <p class="subheadline">... coming soon</p>-->
+      ${header.html_navigation_links()}
+    </div>
+  </header>
+  <!-- site-main -->
+  <main id="main" class="container main">
+    <div class="inner wrapper clearfix">
+	    <%block name="content"></%block>
+    </div>
+  </main>
+  <!-- site-footer -->
+  ${footer.html_footer()}
+  ${body_end}
+  ${template_hooks['body_end']()}
+  ${base.late_load_js()}
+  <%block name="extra_js"></%block>
 </body>
 </html>

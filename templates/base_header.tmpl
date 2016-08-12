@@ -17,18 +17,22 @@
 </%def>
 
 <%def name="html_site_title()">
-      <a href="${abs_link(_link("root", None, lang))}" title="${blog_title}" rel="home" style="display: inline-block;">
-        <img style="width:300px; margin-bottom:-45px;" src="/assets/images/C3W_RB_neg.png" alt="${blog_title}" />
+      <a class="logo" href="${abs_link(_link("root", None, lang))}" title="${blog_title}" rel="home">
+        <img src="/assets/images/C3W_RB_neg.png" alt="${blog_title}" />
       </a>
 </%def>
 
 <%def name="html_navigation_links()">
-    <nav id="menu" role="navigation" class="sidebar-nav" style="display:inline-block">
-    %for url, text in navigation_links[lang]:
-        <a class="sidebar-nav-item" href="${url}">${text}</a>
-    %endfor
-    ${template_hooks['menu']()}
-    ${template_hooks['menu_alt']()}
+    <nav id="menuBar" role="navigation" class="sidebar container menu-bar region">
+      <div class="inner wrapper">
+        <ul class="menu clearfix" id="menu-main">
+      %for url, text in navigation_links[lang]:
+          <li><a href="${url}">${text}</a></li>
+      %endfor
+        </ul>
+      ${template_hooks['menu']()}
+      ${template_hooks['menu_alt']()}
+      </div>
     </nav>
 </%def>
 
